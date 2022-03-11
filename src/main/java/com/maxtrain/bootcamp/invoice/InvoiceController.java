@@ -33,7 +33,7 @@ public class InvoiceController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		var inv = invRepo.save(invoice);
-		return new ResponseEntity<Invoice>(invoice, HttpStatus.CREATED);
+		return new ResponseEntity<Invoice>(inv, HttpStatus.CREATED);
 	}
 	
 	@PutMapping("{id}")
